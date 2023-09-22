@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "c22cc005-85af-4e9b-aa32-91fe1ea447b8",
+		"name": "M3S07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28339570"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/medicos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Lionel Messi\",\r\n  \"telefone\": \"(1) 8 3462-1121\",\r\n  \"dataNascimento\": \"1987-24-06\",\r\n  \"cpf\": \"023.879.689-42\",\r\n  \"nota\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medicos/{id}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Dr. John Doe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"telefone\": \"123-456-7890\",\r\n  \"crm\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medicos/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Dr. John Doe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"telefone\": \"123-456-7890\",\r\n  \"crm\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medicos/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Updated Dr. John Doe\",\r\n  \"email\": \"updated@example.com\",\r\n  \"telefone\": \"987-654-3210\",\r\n  \"crm\": \"54321\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medicos/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Updated Dr. John Doe\",\r\n  \"email\": \"updated@example.com\",\r\n  \"telefone\": \"987-654-3210\",\r\n  \"crm\": \"54321\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
