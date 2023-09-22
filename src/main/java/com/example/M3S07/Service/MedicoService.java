@@ -55,8 +55,9 @@ public class MedicoService {
         return null; // Handle this better in a real application
     }
 
-    public void excluirMedico(Long id) {
+    public boolean excluirMedico(Long id) {
         medicoRepository.deleteById(id);
+        return false;
     }
 
     private MedicoDTO convertToDTO(Medico medico) {
