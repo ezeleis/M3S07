@@ -1,6 +1,4 @@
-
-
-name: Java CI with Maven
+name: Java CI with Maven and Docker
 
 on:
   push:
@@ -10,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -24,4 +20,22 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-   
+  publish-docker:
+    needs: build  
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Login to Docker Hub
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+    - name: Build and tag Docker image
+      run: |
+        docker build -t ezwhc/m3s07:latest .
+        docker tag ezwhc/m3s07:latest ezwhc/m3s07:$(date +%Y%m%d%H%M%S)
+
+    - name: Push Docker image to Docker Hub
+      run: |
+        docker push ezwhc/m3s07:latest
+        docker push ezwhc/m3s07:$(date +%Y%m%d%H%M%S)
