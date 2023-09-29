@@ -38,4 +38,3 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         docker push ezwhc/m3s07:latest
-        docker push ezwhc/m3s07:$(date +%Y%m%d%H%M%S)
