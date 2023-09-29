@@ -33,7 +33,7 @@ jobs:
     - name: Build and tag Docker image
       run: |
         docker build -t ezwhc/m3s07:latest .
-        docker tag ezwhc/m3s07:latest ezwhc/m3s07:$(date +%Y%m%d%H%M%S)
+        docker tag ezwhc/m3s07:latest ezwhc/m3s07:latest
 
     - name: Push Docker image to Docker Hub
       run: |
